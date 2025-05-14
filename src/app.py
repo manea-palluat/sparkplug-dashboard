@@ -35,3 +35,11 @@ max_ts = datetime.fromtimestamp(float(res["MX"])/1000, tz=timezone.utc) #là par
 
 st.write(min_ts, max_ts) #test affichage
 
+#on va créer dans la sidebar des filtres interactifs sur les colonnes de la table
+
+# charger les valeurs distinctes pour les filtres
+namespaces = [r[0] for r in t.select("NAMESPACE").distinct().collect()]
+
+st.sidebar.header("Filtres")
+
+sel_ns = st.sidebar.multiselect("Namespace", namespaces, default=namespaces)
