@@ -1,11 +1,7 @@
 
 # Sparkplug Dashboard
 
-[![CI](https://github.com/ton-utilisateur/ton-repo/actions/workflows/ci.yml/badge.svg)](https://github.com/ton-utilisateur/ton-repo/actions)
-
 This dashboard allows users to explore Sparkplug B data stored in Snowflake, apply filters, and visualize key metrics from the SPARKPLUG_RAW table. Built with Streamlit and Snowflake Snowpark.
-
----
 
 ## Features
 
@@ -16,15 +12,14 @@ This dashboard allows users to explore Sparkplug B data stored in Snowflake, app
 - Live KPIs (message count, unique topics)
 - Raw data preview
 
----
 
 ## Getting Started
 
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your-user/your-repo.git
-cd your-repo
+git clone https://github.com/manea-palluat/sparkplug-dashboard
+cd sparkplug-dashboard
 ```
 
 ### 2. Set up virtual environment
@@ -74,8 +69,6 @@ SNOWFLAKE_SCHEMA=your_schema
 streamlit run app.py
 ```
 
----
-
 ## Project Structure
 
 ```
@@ -85,8 +78,6 @@ streamlit run app.py
 ├── .env.template           # Sample environment file
 ├── requirements.txt        # Python dependencies
 ```
-
----
 
 ## Development & CI
 
@@ -99,12 +90,8 @@ venv\Scripts\activate
 
 A GitHub Actions workflow (ci.yml) can be added to check code style, run tests, or validate deployment.
 
----
-
 ## Built With
 
 - Streamlit
 - Snowflake
 - Snowpark Python
-
----
